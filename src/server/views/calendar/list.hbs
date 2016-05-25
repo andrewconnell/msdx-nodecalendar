@@ -1,0 +1,25 @@
+<h2>Listing Events</h2> 
+List all the events in the current user's <strong>Calendar</strong>.
+
+<div>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Start</th>
+        <th>End</th>
+        <th>Subject</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each events}}
+      <tr>
+        <td nowrap>{{dateFormat startTime 'MMM DD, YYYY HH:mm'}}</td>
+        <td nowrap>{{dateFormat endTime 'MMM DD, YYYY HH:mm'}}</td>
+        <td>{{subject}}</td>
+        <td>{{location}}</td>
+      </tr>
+    {{/each}}
+    <tbody>
+  </table>
+</div>
